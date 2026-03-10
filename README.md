@@ -1,8 +1,6 @@
 # <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/201473670-e0e6bdeb-742f-4be1-a47a-3506309620a3.png"> GitHub Codespace for OpenTofu IaC development
 
-**[GitHub Actions](https://github.com/osinfra-io/github-opentofu-codespace/actions):**
-
-[![Dependabot](https://github.com/osinfra-io/github-opentofu-codespace/actions/workflows/dependabot.yml/badge.svg)](https://github.com/osinfra-io/github-opentofu-codespace/actions/workflows/dependabot.yml)
+[![Dependabot](https://img.shields.io/github/actions/workflow/status/osinfra-io/pt-techne-opentofu-codespace/dependabot.yml?style=for-the-badge&logo=github&color=2088FF&label=Dependabot)](https://github.com/osinfra-io/pt-techne-opentofu-codespace/actions/workflows/dependabot.yml)
 
 ## Blazing fast cloud IaC developer environments
 
