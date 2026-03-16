@@ -7,6 +7,10 @@ updates:
     directory: .devcontainer/
     schedule:
       interval: daily
+    groups:
+      docker:
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
 
@@ -15,8 +19,16 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: pre-commit
     directory: /
     schedule:
       interval: daily
+    groups:
+      pre-commit:
+        patterns:
+          - "*"
