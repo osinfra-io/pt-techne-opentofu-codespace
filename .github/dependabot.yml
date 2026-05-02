@@ -3,15 +3,6 @@
 
 version: 2
 updates:
-  - package-ecosystem: docker
-    directory: .devcontainer/
-    schedule:
-      interval: daily
-    groups:
-      docker:
-        patterns:
-          - "*"
-
   - package-ecosystem: "github-actions"
 
     # NOTE: The "/" here is for checking for workflow files in .github/workflows

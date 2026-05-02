@@ -12,13 +12,15 @@ Visual Studio Code backed by high-performance VMs that start in seconds.
 
 Customizing the settings and tools to your preferences and workflows is an important step when using any development environment. Codespaces allows for two main ways of personalizing your codespaces.
 
-[Settings Sync](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account#settings-sync) - You can use and share Visual Studio Code settings between Codespaces and other instances of Visual Studio Code.
-
 [Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account#dotfiles) – You can use a `dotfiles` repository to specify scripts, shell preferences, and other configurations.
 
 Codespaces personalization applies to any codespace you create.
 
 [Managing access to other repositories within your codespace](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-repository-access-for-your-codespaces)
+
+### Multi-repo workspace
+
+When a codespace starts, all `pt-*` repositories in the `osinfra-io` organization are automatically cloned into `/workspaces/`. VS Code opens `/workspaces` directly so all repositories are immediately visible and navigable in the file explorer.
 
 ## Goals
 

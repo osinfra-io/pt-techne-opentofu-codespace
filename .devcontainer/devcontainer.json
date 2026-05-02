@@ -1,32 +1,195 @@
 {
     "name": "GitHub Codespace for OpenTofu Infrastructure as Code (IaC) Development",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "ghcr.io/osinfra-io/ubuntu:v1.6.0",
+    "remoteUser": "vscode",
+    "workspaceFolder": "/workspaces",
+    "postCreateCommand": "bash /workspaces/pt-techne-opentofu-codespace/.devcontainer/clone-repos.sh",
     "customizations": {
         "vscode": {
             "extensions": [
-                "vscodevim.vim",
-                "streetsidesoftware.code-spell-checker",
                 "datadog.datadog-vscode",
                 "davidanson.vscode-markdownlint",
                 "docker.docker",
                 "github.vscode-github-actions",
-                "github.copilot",
-                "github.copilot-chat",
                 "github.vscode-pull-request-github",
                 "golang.go",
-                "ms-kubernetes-tools.vscode-kubernetes-tools",
                 "ms-azuretools.vscode-containers",
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
                 "opentofu.vscode-opentofu",
+                "redhat.vscode-yaml",
                 "tsandall.opa",
-                "redhat.vscode-yaml"
-            ]
+                "vscodevim.vim"
+            ],
+            "settings": {
+                "datadog.telemetry.setup.enableTelemetry": "enabled",
+                "diffEditor.ignoreTrimWhitespace": false,
+                "docker.extension.dockerEngineAvailabilityPrompt": false,
+                "docker.extension.enableComposeLanguageServer": false,
+                "editor.acceptSuggestionOnCommitCharacter": false,
+                "editor.accessibilitySupport": "off",
+                "editor.cursorStyle": "line",
+                "editor.fontFamily": "MesloLGS NF",
+                "editor.fontSize": 13,
+                "editor.fontWeight": "bold",
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true,
+                "editor.formatOnType": true,
+                "editor.inlineSuggest.enabled": true,
+                "editor.insertSpaces": false,
+                "editor.lineNumbers": "on",
+                "editor.quickSuggestions": {
+                    "other": "off"
+                },
+                "editor.semanticHighlighting.enabled": true,
+                "editor.stickyScroll.enabled": true,
+                "editor.suggest.showWords": false,
+                "editor.tabSize": 8,
+                "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+                "editor.wordWrap": "off",
+                "files.associations": {
+                    "LICENSE": "plaintext",
+                    "CODEOWNERS": "plaintext"
+                },
+                "files.autoSave": "afterDelay",
+                "files.exclude": {
+                    "**/.codespaces": true,
+                    "**/.terraform": true,
+                    "**/.vscode": true
+                },
+                "git.autofetch": true,
+                "git.branchProtection": [
+                    "main"
+                ],
+                "git.confirmSync": false,
+                "git.enableSmartCommit": true,
+                "git.fetchOnPull": true,
+                "git.ignoreRebaseWarning": true,
+                "git.pruneOnFetch": true,
+                "git.pullTags": false,
+                "git.repositoryScanMaxDepth": 3,
+                "github-actions.workflows.pinned.refresh.enabled": true,
+                "githubIssues.createIssueTriggers": [
+                    "BUG",
+                    "TODO",
+                    "ISSUE"
+                ],
+                "githubIssues.queries": [
+                    {
+                        "label": "My Issues",
+                        "query": "default"
+                    },
+                    {
+                        "label": "Created Issues",
+                        "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+                    }
+                ],
+                "githubPullRequests.assignCreated": "${user}",
+                "githubPullRequests.defaultCreateOption": "createDraft",
+                "githubPullRequests.defaultMergeMethod": "squash",
+                "githubPullRequests.fileListLayout": "flat",
+                "githubPullRequests.pullBranch": "never",
+                "githubPullRequests.pushBranch": "always",
+                "go.toolsManagement.autoUpdate": true,
+                "gopls": {
+                    "ui.semanticTokens": true
+                },
+                "markdownlint.config": {
+                    "MD013": false,
+                    "MD033": false,
+                    "MD045": false
+                },
+                "opa.formatter": "opa-fmt-rego-v1",
+                "redhat.telemetry.enabled": false,
+                "remote.autoForwardPortsSource": "hybrid",
+                "terminal.integrated.copyOnSelection": true,
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.enableImages": true,
+                "terminal.integrated.fontFamily": "MesloLGS NF",
+                "terminal.integrated.fontSize": 13,
+                "terminal.integrated.fontWeight": "bold",
+                "terminal.integrated.middleClickBehavior": "paste",
+                "terminal.integrated.scrollback": 25000,
+                "terminal.integrated.stickyScroll.enabled": false,
+                "terminal.integrated.suggest.enabled": false,
+                "vscode-kubernetes.log-viewer.follow": true,
+                "vim.autoindent": false,
+                "vim.cursorStylePerMode.insert": "block-outline",
+                "vim.cursorStylePerMode.normal": "block",
+                "vim.easymotionDimBackground": false,
+                "vim.overrideCopy": false,
+                "vim.surround": false,
+                "vim.useCtrlKeys": false,
+                "workbench.colorCustomizations": {
+                    "[Monokai Dimmed]": {
+                        "activityBar.background": "#232323",
+                        "editor.background": "#1E1E1E",
+                        "focusBorder": "#353535",
+                        "sideBar.background": "#1E1E1E",
+                        "sideBar.border": "#353535",
+                        "sideBarSectionHeader.background": "#1E1E1E",
+                        "statusBar.background": "#232323",
+                        "statusBarItem.remoteBackground": "#ffb400",
+                        "tab.inactiveBackground": "#232323",
+                        "terminal.background": "#1E1E1E",
+                        "titleBar.activeBackground": "#232323",
+                        "toolbar.activeBackground": "#232323"
+                    },
+                    "terminal.ansiBlack": "#2F2E2D",
+                    "terminal.ansiBlue": "#7FA5BD",
+                    "terminal.ansiCyan": "#8ADBB4",
+                    "terminal.ansiGreen": "#90A57D",
+                    "terminal.ansiMagenta": "#C79EC4",
+                    "terminal.ansiRed": "#A36666",
+                    "terminal.ansiWhite": "#D0D0D0",
+                    "terminal.ansiYellow": "#D7AF87",
+                    "terminal.ansiBrightBlack": "#4A4845",
+                    "terminal.ansiBrightBlue": "#A1BDCE",
+                    "terminal.ansiBrightCyan": "#B1E7DD",
+                    "terminal.ansiBrightGreen": "#AFBEA2",
+                    "terminal.ansiBrightMagenta": "#D7BEDA",
+                    "terminal.ansiBrightRed": "#D78787",
+                    "terminal.ansiBrightWhite": "#EFEFEF",
+                    "terminal.ansiBrightYellow": "#E4C9AF",
+                    "terminal.background": "#1C1C1C",
+                    "terminal.foreground": "#D0D0D0"
+                },
+                "workbench.colorTheme": "Monokai Dimmed",
+                "workbench.editorAssociations": {
+                    "*.dd-md": "vscode.markdown.preview.editor",
+                    "git-rebase-todo": "default"
+                },
+                "workbench.startupEditor": "newUntitledFile",
+                "[dockercompose]": {
+                    "editor.autoIndent": "advanced",
+                    "editor.defaultFormatter": "redhat.vscode-yaml",
+                    "editor.insertSpaces": true,
+                    "editor.quickSuggestions": {
+                        "comments": false,
+                        "other": true,
+                        "strings": true
+                    },
+                    "editor.tabSize": 2
+                },
+                "[github-actions-workflow]": {
+                    "editor.defaultFormatter": "redhat.vscode-yaml"
+                },
+                "chat.instructionsFilesLocations": {
+                    "/workspaces/pt-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-arche-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-corpus-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-ekklesia-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-logos-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-pneuma-ai-context/.github/instructions/team.instructions.md": true,
+                    "/workspaces/pt-techne-ai-context/.github/instructions/team.instructions.md": true
+                },
+                "[markdown]": {
+                    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+                }
+            }
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {
-            "version": "latest"
-        }
+        "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {}
     }
 }
+
