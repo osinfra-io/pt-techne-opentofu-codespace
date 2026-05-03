@@ -1,6 +1,6 @@
 {
     "name": "GitHub Codespace for OpenTofu Infrastructure as Code (IaC) Development",
-    "image": "ghcr.io/osinfra-io/ubuntu:v1.6.0",
+    "image": "ghcr.io/osinfra-io/ubuntu:latest",
     "remoteUser": "vscode",
     "workspaceFolder": "/workspaces",
     "postCreateCommand": "bash /workspaces/pt-techne-opentofu-codespace/.devcontainer/clone-repos.sh",
@@ -174,13 +174,13 @@
                     "editor.defaultFormatter": "redhat.vscode-yaml"
                 },
                 "chat.instructionsFilesLocations": {
-                    "/workspaces/pt-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-arche-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-corpus-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-ekklesia-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-logos-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-pneuma-ai-context/.github/instructions/team.instructions.md": true,
-                    "/workspaces/pt-techne-ai-context/.github/instructions/team.instructions.md": true
+                    "pt-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-arche-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-corpus-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-ekklesia-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-logos-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-pneuma-ai-context/.github/instructions/team.instructions.md": true,
+                    "pt-techne-ai-context/.github/instructions/team.instructions.md": true
                 },
                 "[markdown]": {
                     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
