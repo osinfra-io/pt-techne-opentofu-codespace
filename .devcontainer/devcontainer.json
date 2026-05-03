@@ -1,6 +1,6 @@
 {
     "name": "GitHub Codespace for OpenTofu Infrastructure as Code (IaC) Development",
-    "image": "ghcr.io/osinfra-io/ubuntu:latest",
+    "image": "ghcr.io/osinfra-io/ubuntu:v1.6.1",
     "remoteUser": "vscode",
     "workspaceFolder": "/workspaces",
     "postCreateCommand": "bash /workspaces/pt-techne-opentofu-codespace/.devcontainer/clone-repos.sh",
