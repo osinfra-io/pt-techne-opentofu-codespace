@@ -5,6 +5,298 @@
     "workspaceFolder": "/workspaces",
     "postCreateCommand": "bash /workspaces/pt-techne-opentofu-codespace/.devcontainer/clone-repos.sh",
     "customizations": {
+        "codespaces": {
+            "repositories": {
+                "osinfra-io/pt-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-child-module-template": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-core-helpers": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-datadog-google-integration": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-google-cloud-sql": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-google-kubernetes-engine": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-google-network": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-google-project": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-google-storage-bucket": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-kubernetes-cert-manager": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-kubernetes-datadog-operator": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-kubernetes-istio": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-arche-kubernetes-opa-gatekeeper": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-corpus": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-corpus-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-ekklesia-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-ekklesia-docs": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-kryptos": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-kryptos-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-logos": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-logos-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-pneuma": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-pneuma-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-pneuma-istio-test": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-agents": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-ai-context": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-development-setup": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-mcp-server": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-misc-workflows": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-opentofu-workflows": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                },
+                "osinfra-io/pt-techne-pre-commit-hooks": {
+                    "permissions": {
+                        "actions": "write",
+                        "contents": "write",
+                        "issues": "write",
+                        "pull_requests": "write",
+                        "workflows": "write"
+                    }
+                }
+            }
+        },
         "vscode": {
             "extensions": [
                 "datadog.datadog-vscode",
@@ -192,4 +484,3 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {}
     }
 }
-
