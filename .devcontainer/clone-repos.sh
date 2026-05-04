@@ -39,13 +39,20 @@ repos=(
 
 cd /workspaces
 
+pids=()
+
 for repo in "${repos[@]}"; do
   if [ ! -d "$repo" ]; then
     echo "Cloning osinfra-io/${repo}..."
-    gh repo clone "osinfra-io/${repo}" || echo "Warning: failed to clone ${repo}, skipping"
+    (gh repo clone "osinfra-io/${repo}" -- --depth 1 || echo "Warning: failed to clone ${repo}, skipping") &
+    pids+=("$!")
   else
     echo "Already exists: ${repo}"
   fi
+done
+
+for pid in "${pids[@]}"; do
+  wait "$pid"
 done
 
 echo "Done."
