@@ -6,7 +6,10 @@ cd /workspaces
 
 pids=()
 
-while IFS= read -r repo; do
+repos_json=$(gh repo list osinfra-io --limit 1000 --json name)
+mapfile -t repos < <(echo "$repos_json" | jq -r '.[] | select(.name|startswith("pt-")) | .name')
+
+for repo in "${repos[@]}"; do
   if [ ! -d "$repo" ]; then
     echo "Cloning osinfra-io/${repo}..."
     (gh repo clone "osinfra-io/${repo}" -- --depth 1 || echo "Warning: failed to clone ${repo}, skipping") &
@@ -14,7 +17,7 @@ while IFS= read -r repo; do
   else
     echo "Already exists: ${repo}"
   fi
-done < <(gh repo list osinfra-io --json name --jq '.[] | select(.name|startswith("pt-")) | .name')
+done
 
 for pid in "${pids[@]}"; do
   wait "$pid"
