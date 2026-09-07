@@ -7,7 +7,11 @@ cd /workspaces
 pids=()
 
 repos_json=$(gh repo list osinfra-io --limit 1000 --json name)
-mapfile -t repos < <(echo "$repos_json" | jq -r '.[] | select(.name|startswith("pt-")) | .name')
+filtered_repos=$(jq -r '.[] | select(.name|startswith("pt-")) | .name' <<<"$repos_json")
+repos=()
+if [ -n "$filtered_repos" ]; then
+  mapfile -t repos <<<"$filtered_repos"
+fi
 
 for repo in "${repos[@]}"; do
   if [ ! -d "$repo" ]; then
