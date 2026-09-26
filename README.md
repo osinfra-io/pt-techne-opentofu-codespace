@@ -8,6 +8,6 @@ This repository defines the standard browser-based development environment for t
 
 ## Startup behavior
 
-On first start, the Codespace uses the image built by [`pt-techne-development-setup`](https://github.com/osinfra-io/pt-techne-development-setup), clones every accessible `osinfra-io/pt-*` repository into `/workspaces/`, and opens that directory as a multi-repository workspace.
+On first start, the Codespace uses the image built by [`pt-techne-development-setup`](https://github.com/osinfra-io/pt-techne-development-setup), attempts to clone the accessible `osinfra-io/pt-*` repositories returned by `gh repo list --limit 1000` into `/workspaces/`, and opens that directory as a multi-repository workspace. Clone failures are skipped with a warning.
 
 GitHub authentication is inherited from the Codespace. Repositories that the current user cannot access are skipped by the clone process. Restarting the Codespace does not rerun `postCreateCommand`; rebuilding reruns setup but skips directories that already exist in the persistent `/workspaces/` volume, so newly accessible repositories may not be added and repositories that lost access may remain.
