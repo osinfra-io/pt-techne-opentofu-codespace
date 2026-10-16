@@ -169,24 +169,6 @@
                         "workflows": "write"
                     }
                 },
-                "osinfra-io/pt-kryptos": {
-                    "permissions": {
-                        "actions": "write",
-                        "contents": "write",
-                        "issues": "write",
-                        "pull_requests": "write",
-                        "workflows": "write"
-                    }
-                },
-                "osinfra-io/pt-kryptos-ai-context": {
-                    "permissions": {
-                        "actions": "write",
-                        "contents": "write",
-                        "issues": "write",
-                        "pull_requests": "write",
-                        "workflows": "write"
-                    }
-                },
                 "osinfra-io/pt-logos": {
                     "permissions": {
                         "actions": "write",
